@@ -1,0 +1,1289 @@
+\documentclass[12pt,openany]{book}
+\usepackage{amsmath, amssymb, amsthm, amsfonts}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{booktabs}
+\usepackage{makecell}
+\usepackage{multicol}
+\usepackage{geometry}
+\usepackage{bbding}
+\geometry{a4paper,left=2cm,right=2cm}
+
+
+\begin{document}
+
+% WEEK 1
+\chapter{Introduction of Software}
+\section{Software Overview}
+\subsubsection{Types}
+\begin{itemize}
+    \item System Software
+    \item Application Software
+\end{itemize}
+
+\subsubsection{Good Software}
+\begin{table}[H]
+    \centering
+    \begin{tabular}{cc}
+
+        Functionality & Reliability \\
+
+        Usability & Scalability \\
+
+        Performance & Security \\
+
+        Maintainability & Compatibility \\
+
+        Flexibility & Documentation \\
+        
+        Interoperability & Error Handling \\
+        
+        Compliance & Feedback Mechanism \\
+        
+    \end{tabular}
+\end{table}
+
+\section{Software Failures}
+\subsubsection{Causes}
+\begin{itemize}
+    \item Missing Focus
+    \item Content Issues
+    \item Skill Issues
+    \item Execution Issues
+\end{itemize}
+\subsubsection{Issues that Affect Software}
+\begin{itemize}
+    \item Heterogeneity
+    \item Bussiness and social change
+    \item Security and trust
+    \item Scale
+    \item[$\diamond$] Gen AI:
+    \begin{itemize}
+        \item Benifits:
+        \begin{itemize}
+            \item Help generate ideas
+            \item Faster prototyping
+            \item  Increased productivity and efficiency
+            \item Enhanced code quality
+            \item Process automation
+        \end{itemize}
+        \item Challenges:
+        \begin{itemize}
+            \item Code reliability
+            \item Security risks
+            \item Dependence on AI
+            \item Intellectual property and ethical concerns
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\section{Software Process}
+\begin{itemize}
+    \item Requirement specification: Define what the software should do
+    \item Development
+    \begin{itemize}
+        \item Analysis: Create analysis models of the software system
+        \item Design: Write detailed design documentation
+        \item Implementation: Write the program code to implement the design
+    \end{itemize}
+    \item Validation
+    \begin{itemize}
+        \item Testing: Test the system to ensure it meets the requirements
+        \item Deployment: Release the software to users
+    \end{itemize}
+    \item Evolution (Maintenance): Fix bugs and add new features after the software is in use
+\end{itemize}
+\subsubsection{Software Process Models}
+\begin{itemize}
+    \item Waterfall Model
+    \begin{itemize}
+        \item Advantages:
+        \begin{itemize}
+            \item Easy to monitor and control
+            \item Documentation is well produced at each stage
+            \item Structured approach
+            \item Specialised teams can be used at each stage of the lifecycle
+        \end{itemize}
+        \item Disadvantages:
+        \begin{itemize}
+            \item Inflexible to change
+            \item Time-consuming
+            \item Not realistic for large projects
+            \item Decision-making flaws in the early stages have been magnified
+        \end{itemize}
+        \item Only suitable for:
+        \begin{itemize}
+            \item Small projects with well-defined requirements
+            \item Enhancements or adaptation to existing systems
+            \item High risk, safety critical projects which need high quality
+        \end{itemize}
+    \end{itemize}
+    \item Evolutionary Development
+    \begin{itemize}
+        \item Advantages:
+        \begin{itemize}
+            \item Effective
+            \item Can meet immediate needs
+            \item Specification can be developed incrementally
+        \end{itemize}
+        \item Disadvantages:
+        \begin{itemize}
+            \item Lack of process visibility
+            \item Poor structure
+            \item Special skills may be required
+            \item Scope Creep
+        \end{itemize}
+        \item Only suitable for:
+        \begin{itemize}
+            \item Small or medium-sized interactive systems
+            \item Part of large system (UI)
+            \item Systems with poorly defined requirements
+            \item Short-lifetime systems
+            \item Project with multiple features which need release for testing
+        \end{itemize}
+    \end{itemize}
+    \item RUP (Rational Unified Process)
+    \begin{itemize}
+        \item Advantages:
+        \begin{itemize}
+            \item Generic process framework
+            \item Seprate phases and workflows
+            \item Risk management
+        \end{itemize}
+        \item Disadvantages:
+        \begin{itemize}
+            \item Overhead of documents and diagrams
+            \item High complexity
+        \end{itemize}
+        \item Only suitable for:
+        \begin{itemize}
+            \item Medium to large complex systems
+        \end{itemize}
+    \end{itemize}
+    \item $\uparrow$ Traditional Software Process Models
+    \item $\downarrow$ Rapid Application Development (RAD)
+\end{itemize}
+
+\chapter{Agile Software Development}
+\section{Agile Development Overview}
+\begin{itemize}
+    \item Focus:
+    \begin{itemize}
+        \item Code
+        \item Based on an iterative approach
+        \item Deliver working software quickly to meet changing requirements
+    \end{itemize}
+    \item Manifesto:
+    \begin{itemize}
+        \item \textbf{Individuals and interactions} over processes and tools
+        \item \textbf{Working software} over comprehensive documentation
+        \item \textbf{Customer collaboration} over contract negotiation
+        \item \textbf{Responding to change} over following a plan
+    \end{itemize}
+    \item Principles:
+    \begin{itemize}
+        \item Customer involvement
+        \item Incremental delivery
+        \item People, not process
+        \item Embrace change
+        \item Maintain simplicity
+    \end{itemize}
+    \item Iteration:
+    \begin{itemize}
+        \item Planning: Define the scope and objectives of the iteration
+        \item Requirement analysis: Identify and prioritize user stories
+        \item Design: Create a high-level design for the iteration
+        \item Building: Develop the software incrementally
+        \item Testing: Test the software incrementally
+    \end{itemize}
+    \item Extreme Programming (XP)
+    \begin{itemize}
+        \item New versions may be built several times per day
+        \item Increments are delivered to customers every 2 weeks
+        \item All requirements are expressed as user stories
+        \item Programmers work in pairs
+        \item Develop tests before writing code
+        \begin{itemize}
+            \item Helps develop common ownership of code
+            \item An informal review process
+            \item Encourages refactoring
+            \item Development productivity is similar to that of two programmers working separately
+        \end{itemize}
+        \item All tests must be run for every build and the build is only accepted if tests run successfully
+    \end{itemize}
+    \item Problem:
+    \begin{itemize}
+        \item Can be difficult to keep interest of customers who are involved in the process
+        \item Team members may be unsuited to the intense involvement that characterises agile methods
+        \item Prioritising changes can be difficult where there are multiple stakeholders
+        \item Maintaining simplicity requires extra work
+        \item Contracts may be a problem as with other approaches to iterative development
+    \end{itemize}
+    \item Require:
+    \begin{itemize}
+        \item Experience in the use of agile methods
+        \item Working environment that supports the agile process
+        \item Value thinking
+        \item Effective and efficient communication
+        \item Information sharing
+        \item Tools and Automation
+    \end{itemize}
+    \item Suitable for:
+    \begin{itemize}
+        \item Small to medium-sized systems
+        \item Systems with rapidly changing requirements
+        \item Rapidly evolving systems
+        \item Customer involvement is possible
+        \item Not a lot of external rules and regulations
+    \end{itemize}
+\end{itemize}
+
+% WEEK 2
+\section{Requirements}
+\begin{itemize}
+    \item Who provides $\rightarrow$ Stakeholders: Any person or group who is \textbf{affected by the system} and so who \textbf{has legitimate interest} in the system
+    \item Understanding the requirements: Requirements Engineering
+    \item Classification of requirements:
+    \begin{itemize}
+        \item Functional requirements: What the system should do
+        \begin{itemize}
+            \item Imprecision
+            \item Need completeness and consistency
+        \end{itemize}
+        \item Non-functional requirements: How the system should perform
+        \begin{itemize}
+            \item Some are difficult to verify
+            \item Need to be measurable (quantitative)
+        \end{itemize}
+    \end{itemize}
+    \item Conflict of requirements: Choose the best option and this has to be agreed by all stakeholders.
+    \item Software requirements specification (SRS): A document that describes \textbf{WHAT} the system should do.
+    \item Capturing requirements:
+    \begin{enumerate}
+        \item Background reading
+        \item Interviewing
+        \item Observation
+        \item Document sampling
+        \item Questionnaires
+    \end{enumerate}
+\end{itemize}
+
+\subsubsection{In Agile Development -- User Stories}
+\begin{itemize}
+    \item Format: \textbf{As a} [user role], \textbf{I want} [goal], \textbf{so that} [reason]
+    \item Describe \textbf{WHAT the user wants to do}, not HOW the system should do it
+    \item Project glossary: A list of terms and their definitions that are used in the project
+    \item Epics: Large user stories that can be broken down into smaller user stories
+    \item Acceptance Criteria: Conditions that must be met for a user story to be considered complete
+    \item Product Backlog: A \textbf{prioritized} list of user stories that need to be implemented in the system
+    \begin{itemize}
+        \item Prioritisation --- MoSCoW Prioritization: A method for prioritizing user stories based on their importance
+        \begin{itemize}
+            \item Must have: Critical requirements that must be implemented
+            \item Should have: Important requirements that should be implemented if possible
+            \item Could have: Nice-to-have requirements that could be implemented if time allows
+            \item Want to have: Requirements that are not essential and can be deferred to a later release
+        \end{itemize}
+        \item Estimating --- Story Points: A relative measure that allows the team to understand the size of the effort
+    \end{itemize}
+    \item Principles --- INVEST:
+    \begin{itemize}
+        \item Independent: User stories should be independent of each other
+        \item Negotiable: User stories should be negotiable and not set in stone
+        \item Valuable: User stories should provide value to the customer
+        \item Estimable: User stories should be easy to estimate
+        \item Small: User stories should be small enough to be completed in a single iteration
+        \item Testable: User stories should be testable and have clear acceptance criteria
+    \end{itemize}
+\end{itemize}
+\subsubsection{Prototyping}
+\begin{itemize}
+    \item Low-fidelity prototypes: Simple sketches or wireframes that represent the layout and functionality of the system
+    \item Medium-fidelity prototypes: More detailed representations of the system, often created using software tools
+    \item High-fidelity prototypes: Fully functional versions of the system that closely resemble the final product
+\end{itemize}
+
+\section{Design}
+\begin{itemize}
+    \item To precise understanding of requirements
+    \item Describe HOW the system works
+    \item Quality guidelines:
+    \begin{itemize}
+        \item Meet the requirements
+        \item Be well structured
+        \item Be modular
+        \item Contain distinct repersentations of data, architecture, interfaces, and components
+        \item Be maintainable and traceable
+        \item Be well documented
+        \item Be efficient
+        \item Be error free
+    \end{itemize}
+    \item Foundamental design concepts:
+    \begin{itemize}
+        \item Abstraction
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{c|cc}
+                \toprule
+                &\textbf{Abstract Class} & \textbf{Interface}\\
+                \midrule
+                Defines behavior & $\checkmark$ & $\checkmark$\\
+                Can have Implementation code & $\checkmark$ &\\
+                Cannot be instantiated & $\checkmark$ & $\checkmark$\\
+                A class can & Inherit only one & Implement multyple\\
+                When to use & All class have same code &\\
+                \bottomrule
+            \end{tabular}
+        \end{table}
+        \item Architecture
+        \item Modularity
+        \begin{itemize}
+            \item Functional independence: Independent and interchangeable modules
+            \item Single responsibility: Each module contain only one specific function
+            \item Module interface: Define the elements to enable communication
+            \item Detectability: Other modules can recognize the elements
+        \end{itemize}
+        \item Patterns
+        \item Information hiding: Encapsulation
+        \begin{itemize}
+            \item Restricting of direct access to some of an object's components
+            \item Bundling of data with the methods that operate on that data
+        \end{itemize}
+        \item Functional independence
+        \begin{itemize}
+            \item Coupling: The degree of dependency between modules or components (Loose$\checkmark$/ Tight$\times$)
+            \item Cohesion: The correlation of internal functions of a module or a component (High$\checkmark$/ Low$\times$)
+        \end{itemize}
+        \item Refinement
+        \item Refactoring: Optimize and improve code structure without changing the external behavior of the code
+        \begin{itemize}
+            \item Improve nonfunctional attributes of the software
+        \end{itemize}
+    \end{itemize}
+    \item Object Oriented Design
+    \begin{itemize}
+        \item Advantages:
+        \begin{itemize}
+            \item Easier maintenance
+            \item Potentially reusable components 
+            \item May be an obvious mapping from real world entities to system objects.
+        \end{itemize}
+    \end{itemize}
+    \item Steps:
+    \begin{enumerate}
+        \item Based on the conceptual class diagram produced from the Analisis stage
+        \item Identifying Class relationships: Associations/Generalisations
+        \item Identify operations
+        \item Describe methods
+        \item Capture implementation requirements
+        \item produce detailed design class diagram
+    \end{enumerate}
+\end{itemize}
+
+\section{Implementation}
+\begin{itemize}
+    \item Design $\rightarrow$ Code
+    \item Purpose: Implement the system in terms of components
+    \item Build: The result of each incremental step
+    \item Build Plan: Describe the sequence of builds (Functionality \&  affected part)
+    \item Class Definition:
+    \begin{itemize}
+        \item Class Diagram: Class name, attributes, operations
+    \end{itemize}
+    \item Method Definition:
+    \begin{itemize}
+        \item Show the sequence of messages that are sent in response to a method invocation
+        \item The sequences of these messages translate to a series of statements in the method definition
+        \item Parameters, return type, method decomposition
+    \end{itemize}
+    \item Unidirectional:
+    \begin{itemize}
+        \item One-to-one
+        \item One-to-many 
+    \end{itemize}
+\end{itemize}
+
+\section{Testing}
+\begin{itemize}
+    \item Aim: Verify the results from the \textbf{implementation stage}
+    \item Goal:
+    \begin{itemize}
+        \item Validation testing: Demonstrate the software meets its requirements
+        \item Defect testing: Discover defect
+    \end{itemize}
+    \item Process: Unit \& System \& Acceptance (Alpha)
+    \item Model: Cases (Prediction) \& Data (Inputs) \& Outputs
+    \begin{itemize}
+        \item Test Case: To create a set of tests that are effective in validation and defect testing
+        \item Format:
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{|c|c|}
+                \hline
+                Module& \texttt{Which Model}\\
+                \hline
+                Component& \texttt{Which class}\\
+                \hline
+                Set up& \texttt{Initialize setting}\\
+                \hline
+                Input Data& \texttt{Enter\dots}\\
+                \hline
+                Expected Result&\\
+                \hline
+                Actual Result&\\
+                \hline
+            \end{tabular}
+        \end{table}
+    \end{itemize}
+    \item Defect format:
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{|c|c|}
+            \hline
+            Defect number&\\
+            \hline
+            Defect title&\\
+            \hline
+            Bulid number&\\
+            \hline
+            Test number&\\
+            \hline
+            Description&\texttt{Description of the defect}\\
+            \hline
+            Assigned to Component Engineer&\\
+            \hline
+            Raised by/assigned to Test Engineer&\\
+            \hline
+        \end{tabular}
+    \end{table}
+    \item Techniques:
+    \begin{itemize}
+        \item Black-box testing: mainly on requirements
+        \begin{itemize}
+            \item Partition testing: Test critical and intermediate regions
+            \item Regression testing: Verify that modifications to the code have not had a negative impact on existing functionality
+        \end{itemize}
+        \item White-box testing: mainly on internal program logic
+        \begin{itemize}
+            \item Basis Path Testing: Cyclomatic Complexity = number of simple decisions + 1
+            \item Mutation Testing: To check if the existing tests can detect the errors (Robust)
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Test-Driven Development (TDD)}
+\begin{itemize}
+    \item Red-Green-Refactor Cycle
+    \begin{itemize}
+        \item Red: Write test code (Cannot run)
+        \item Green: Implement functions (Can run)
+        \item Refactor: Optimized code
+    \end{itemize}
+    \item Characteristic:
+    \begin{itemize}
+        \item Define interface and specification
+        \item Writing tests before code clarifies the requirements to be implemented
+        \item Incremental test development from scenarios
+        \item Automated tests are run after each change to the code
+        \item User involvement is essential
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{*JUnit}
+\begin{itemize}
+    \item Method
+    \begin{itemize}
+        \item \texttt{assertTrue(condition);}
+        \item \texttt{assertFalse(condition);}
+        \item \texttt{assertNull(object);}
+        \item \texttt{assertNotNull(object);}
+        \item \texttt{assertEquals(expected, actual);}
+        \item \texttt{assertArrayEquals(expected, actual);}
+        \item \texttt{assertEquals(expected[i], actual[i]);}
+        \item \texttt{assertArrayEquals(expected[i], actual[i]);}
+        \item \texttt{fail(message);}
+    \end{itemize}
+    \item Create new test class: New $\rightarrow$ JUnit Test Case
+\end{itemize}
+
+% WEEK 3
+\chapter{Software Project}
+\section{Software Architecture}
+\begin{itemize}
+    \item Understanding how the system should be organized and how to design its overall structure
+    \item Models: Simple box and arrow models or a UML diagram
+    \item Advantages:
+    \begin{itemize}
+        \item System analysis: Understant whether the system can meet its nonfunctional requirements
+        \item Large-scale reuse: Maybe reusable in other systems \& product-line may be developed
+        \item Stackholder communication: As a focus of discussion
+    \end{itemize}
+    \item Agility and architecture:
+    \begin{itemize}
+        \item An early stage of agile processes is to design the overall architecture of the system
+        \item System architecture is expensive to change because it affects a lot of important components in the system
+        \item Focus on the most important design elements
+    \end{itemize}
+    \item Architecture patterns: A stylized description of good design practice
+    \begin{itemize}
+        \item Web-based: Client-server architecture (potentially organized into multiple tires, presence of a single point of failure and bottleneck)
+        \item Distributed systems: Replication and clusters, Load balancing, Caching, Serverless/cloud computing, Hadhoop and Map Reduce
+        \item RESTful (Representational State Transfer): Defines how to structure Web services (Let web resource can be accessed and manipulated using a uniform and predefined set of stateless operations)\item RESTful Principles:
+        \begin{itemize}
+            \item Client-server
+            \item Cacheablility
+            \item Uniform interface
+            \item Statelessness
+            \item Layered system
+            \item Code-On-Demand
+        \end{itemize}
+        \item Mobile applications: Layered architecture
+        \begin{itemize}
+            \item Presentation layer
+            \item Bussiness layer
+            \item Data layer
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\section{Project Management}
+\begin{itemize}
+    \item Ensure software is delivered on time, within budget, and with quality
+    \item Characteristic of Software Project:
+    \begin{itemize}
+        \item Intangible and flexible
+        \item Not standardised
+        \item ``one-off'' project (Techniques change, Experience is obsolete, Need perceptive sight)
+    \end{itemize}
+    \item Activities:
+    \begin{itemize}
+        \item Proposal writing
+        \item Project planning: To make effective management at the start of the project
+        \begin{itemize}
+            \item Iterative process: Only complete when the project is complete
+            \item Process (Bold text means in loop):
+            \begin{itemize}
+                \item Establish constraints
+                \item Estimate parameters
+                \item Define milestones and deliverables
+                \textbf{\item Draw up schedule
+                \item Initiate activities
+                \item Review progress
+                \item Revice original plan
+                \item Update schedule
+                \item Regegotiate constrains and deliverables
+                \item If problem arise, replan the project}
+            \end{itemize}
+            \item Types:
+            \begin{itemize}
+                \item Quality plan
+                \item Validation plan
+                \item Configuration management plan
+                \item Maintenance plan
+                \item Staff development plan
+            \end{itemize}
+            \item Milestones: Recognisable end-points
+            \item Deliverables: Project result deliverd to customers
+            \item Deliverables are usually milestones, but milestones need not be deliverables!
+        \end{itemize}
+        \item Project costing
+        \item Time management
+        \item Project monitoring and reviews
+        \item Personal selection and evaluation
+        \item Report writing and presentations
+        \item Risk management
+        \item Quality management
+    \end{itemize}
+    \item Projecy scheduling: Estimate time and resources required to complete each task
+    \begin{itemize}
+        \item Split project into separate tasks
+        \item Organise tasks concurrently
+        \item Minimise task dependencies
+        \item Depend on intuition and experience
+        \item Good rule:
+        \begin{itemize}
+            \item Estimate as if nothing will go wrong
+            \item Add 30\% for anticipated problems
+            \item Add futher 20\% to cover unanticipated problems
+        \end{itemize}
+        \item Charts: Task chart, Activity network, Bar chart
+    \end{itemize}
+    \item Monitoring: Daily stand up, Weekly reports/meetings, Customer mettings, Demos
+    \item Monitor metric examples:
+    \begin{itemize}
+        \item Number of lines of code
+        \item Number of defects in code
+        \item Test cases completed and in what time frame
+        \item Test cases passed/failed
+    \end{itemize}
+    \item Most important assets $\rightarrow$ People
+    \item Factors:
+    \begin{itemize}
+        \item Consistency
+        \item Respect
+        \item Inclusion
+        \item Honesty
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Agile Project Management}
+\begin{itemize}
+    \item Scrum approach benifits:
+    \begin{itemize}
+        \item Modular development
+        \item Flexibly respond to changes in demand
+        \item Transparency and efficient communication
+        \item Incremental delivery and timely feedback
+        \item Trust and Positive Culture
+    \end{itemize}
+\end{itemize}
+\subsubsection{Activity Network Diagram in Agile}
+\begin{itemize}
+    \item Types:
+    \begin{itemize}
+        \item Activity on Arrow (AOA): Each activity is represented by an arrow, and the nodes represent the start and end of the activities
+        \item Activity on Node (AON): Each activity is represented by a node, and the arrows represent the dependencies between the activities
+    \end{itemize}
+    \item Construct:
+    \begin{itemize}
+        \item Activity: A task or a set of tasks that need to be completed
+        \item Merge Activity: An activity that has more than one predecessor
+        \item Parallel Activity: An activity that can be performed simultaneously with other activities
+        \item Path: A sequence of activities that lead from the start to the end of the project
+        \item \textbf{Critical Path}: The longest path through the network, which determines the minimum project duration
+        \item Event: A point in time that marks the start or completion of one or more activities
+        \item Burst Activity: An activity that has more than one successor
+        \item Dummy Activity: A dashed line that represents a dependency between two activities without consuming time or resources (Only in AOA, Too much use of dummy activities in a network creates confusion)
+    \end{itemize}
+    \item Rules:
+    \begin{itemize}
+        \item Flow from left to right
+        \item An activity cannot start until all its predecessors have been completed
+        \item Arrows indicate precedence and flow and can cross over each other
+        \item Each activity must have a unique number that is greater than any of its predecessors
+        \item Looping is not allowed
+        \item Conditional statements are not allowed
+        \item Use common start and stop nodes (for AON)
+    \end{itemize}
+    \item Conputaion of ES, EF, LS, LF:
+    \begin{figure}[ht]
+        \centering
+        \includegraphics[width=0.3\textwidth]{Compute Diagram.pdf}
+        \caption{Activity Network Diagram}
+    \end{figure}
+    \item Forward Pass:
+    \begin{itemize}
+        \item ES (Early Start): The time an activity can start, given the completion of its predecessors (choose the largest ES of all predecessors)
+        \item EF (Early Finish): The time an activity can finish, pass it to its successors
+        \item Duration: The time required to complete an activity
+        \item ET (Expected Time): The expected time to complete an activity, calculated as the average of the optimistic, pessimistic, and most likely estimates
+        \item ES + Duration = EF
+    \end{itemize}
+    \item Backward Pass:
+    \begin{itemize}
+        \item LS (Late Start): The latest time an activity can start without delaying the project, pass it to its predecessors
+        \item LF (Late Finish): The latest time an activity can finish without delaying the project, given the completion of its successors (choose the smallest LF of all successors)
+        \item LS = LF - Duration
+        \item SL (Slack or Float): The amount of time an activity can be delayed without delaying the project, calculated as LS - ES
+    \end{itemize}
+    \item Sensitivity: The likelihood the original critical path(s) will change once the project is initiated
+\end{itemize}
+
+\section{Project Design Principles}
+\begin{itemize}
+    \item Trade off:
+    \begin{itemize}
+        \item Meet customer needs
+        \item Be convenient to use
+        \item Be safe
+        \item Be efficient
+        \item Be secure
+        \item Meet legal requirements
+        \item Produced within a time limit
+        \item using available human, software and financial resources 
+    \end{itemize}
+    \item Liftspan:
+    \begin{itemize}
+        \item Customer requirements change
+        \item Experience with use suggests new features
+        \item Errors or poor design features need to be corrected
+        \item Advances in technology open new possibilities
+    \end{itemize}
+    \item Principles:
+    \begin{itemize}
+        \item Think at a higher level than just code
+        \item Works correctly
+        \item Make it easy to develop further
+    \end{itemize}
+    \item Poor quality:
+    \begin{itemize}
+        \item Cause other parts stop working
+        \item Inflexible to change
+        \item Every change may causes all these get worse
+        \item Have very expensive consequences later
+    \end{itemize}
+    \item Security problem: One program interacts with another program in an unexpected way
+    \item Abstract way --- UML: The nodes in UML class diagrams correspond to Java classes and interface types
+    \item OO design --- SOLID principles:
+    \begin{itemize}
+        \item Single Responsibility Principle (SRP): A class should have only one reason to change
+        \begin{itemize}
+            \item Disadvantages: Increase complexity, Increase coupling, Decrease cohesion, Create an overenginered system that becomes more difficult to maintain
+        \end{itemize}
+        \item Open-Closed Principle (OCP): Software entities should be open for extension but closed for modification
+        \item Liskov Substitution Principle (LSP): Objects of a superclass should be replaceable with objects of a subclass without affecting the correctness of the program
+        \begin{itemize}
+            \item \textbf{Advantages:} Consistency, Flexibility, Maintainability, Robustness
+        \end{itemize}
+        \item Interface Segregation Principle (ISP): Clients should not be forced to depend on interfaces they do not use
+        \begin{itemize}
+            \item Violations: Fat interfaces, Low cohesion, Empty method implementations, May break SRP
+        \end{itemize}
+        \item Dependency Inversion Principle (DIP): High-level modules should not depend on low-level modules. Both should depend on abstractions
+        \item Do not Repeat Yourself (DRY): Avoid duplication of code and logic in the system
+        \item Least Knowledge Principle (LKP, Law of Demeter): A module should not know about the inner details of the objects it manipulates
+    \end{itemize}
+\end{itemize}
+
+% WEEK 4
+\section{Software Design Patterns}
+\begin{itemize}
+    \item Design pattern: A general reusable solution to a commonly occurring problem in software design
+    \item Types:
+    \begin{itemize}
+        \item Creational patterns: Deal with object creation mechanisms, trying to create objects in a manner suitable to the situation
+        \item Structural patterns: Deal with object composition, creating relationships between objects to form larger structures
+        \item Behavioral patterns: Deal with object collaboration and responsibility, defining how objects interact and communicate with each other
+    \end{itemize}
+    \item Importance:
+    \begin{itemize}
+        \item ``Tricks'' which experienced programmers have come to use
+        \item A way of putting together code to solve a particular sort of problem which it has been noted is common enough to set it down as a general technique
+        \item Applicable in any programming language, but the idea developed in the field of object-oriented programming
+        \item A way to help keep programs in line with main principles of good program design
+        \item Learning the main design patterns is one “fast track” way to becoming an experienced programmer
+        \item Help Structure Code
+        \begin{itemize}
+            \item Give ways of structuring code into parts with clear separate responsibilities (Single Responsibility Principle, SRP)
+            \item Enable code to be written in a generalised way (Open Closed Principle, OCP)
+        \end{itemize}
+        \item Reduce Dependency
+        \begin{itemize}
+            \item Enable details connected to implementation to be hidden from code which uses objects (Dependency Inversion Principle, DIP)
+            \item The code which uses objects does not have to manage when to allow aliasing to save space (Object pool and Flyweight)
+            \item The code which uses objects does not have to manage the transition between one representation and another when for efficiency reasons it is a good idea to change (State Design Pattern)
+        \end{itemize}
+        \item Give a vocabulary which experienced programmers can use to communicate with each other when designing programs
+    \end{itemize}
+    \item Danger and advice:
+    \begin{itemize}
+        \item ``Over-design'' the code which make it more complicated than necessary
+        \item Over-use which lead to code which is more complex than necessary
+        \item Better to start with simple code and “refactor” it using one of the design patterns when more requirements are added later
+        \item Naturally produce code which is easy to refactor later on (principles of good design)
+        \item Pay attention to SOILD Design Principles
+    \end{itemize}
+\end{itemize}
+\subsubsection{Wrapper Pattern}
+\begin{itemize}
+    \item Wrapper Pattern: An object (inner object) is wrapped inside another object (outer object) to provide additional functionality or behavior
+    \item Decorator Pattern involves:
+    \begin{itemize}
+        \item A class which implements an interface
+        \item Inside it a variable of the same interface type whose value is set in the constructor
+        \item Each method from the interface has code which calls the same method with the same arguments on that variable, plus some extra work
+    \end{itemize}
+    \item Adapter Pattern involves:
+    \begin{itemize}
+        \item An outer object which implements an interface wrapping an inner object which is of a class that does not implement that interface
+    \end{itemize}
+    \item Composite Pattern:
+    \begin{itemize}
+        \item A collection of objects of a type which is wrapped and given the behavior of a single object of that type
+        \item ``Compose'' objects into tree structures to represent part-whole hierarchies
+    \end{itemize}
+\end{itemize}
+\subsubsection{Observation Pattern}
+\begin{itemize}
+    \item To cover cases where there is a link between two classes
+    \item To connect objects which store data or perform actions to other objects which deal with ``input/output''
+\end{itemize}
+\subsubsection{Strategy Pattern}
+\begin{itemize}
+    \item Dynamically changes the behaviour of an object by encapsulating it into different strategies
+    \item Choose from multiple algorithms and behaviours at runtime
+\end{itemize}
+\subsubsection{Factory Method}
+\begin{itemize}
+    \item Uses factory methods to deal with the problem of creating objects without having to specify their exact class
+    \item Work like constructors (without the \texttt{new} keyword)
+    \item Can have an interface type as their return type
+    \item Determine the actual type of a new object at run time
+    \item Be used to hide the actual type of the new object
+    \item Could produce a new wrapped object, or an object which puts a wrapper around an existing object
+\end{itemize}
+\subsubsection{MVC}
+\begin{itemize}
+    \item Model-View-Controller (MVC): A software architectural pattern for implementing user interfaces
+    \item Model: The data and business logic of the application
+    \item View: The user interface that displays the data to the user
+    \item Controller: The component that handles user input and updates the model and view accordingly
+\end{itemize}
+\subsubsection{Immutable View}
+\begin{itemize}
+    \item Immutable View: A design pattern that ensures that the state of an object cannot be modified after it is created
+\end{itemize}
+
+\section{Open Source Software}
+\begin{itemize}
+    \item Open Source Software (OSS): Software that is released with a license that allows users to view, modify, and distribute the source code
+    \item Criteria:
+    \begin{itemize}
+        \item Source code must be available
+        \item Derivative works must be allowed
+        \item Free redistribution must be allowed
+        \item Distribution of license must be allowed
+        \item Integrity of the author's source code must be maintained
+        \item License must not restrict other software
+        \item No discrimination against persons or groups
+        \item No discrimination against fields of endeavor
+    \end{itemize}
+    \item Bussiness Strategies:
+    \begin{itemize}
+        \item ``Loss leader'' (in business terms, a product sold at a low price to stimulate sales of more profitable goods or services)
+        \item Companies make profit from installation of OSS products, from offering training in the use of OSS products, and from providing consultancy advice to businesses about their use (Example: Red Hat)
+    \end{itemize}
+    \item Development Strategies:
+    \begin{itemize}
+        \item Software produced by volunteers cannot be produced under the forms of management used for commercial software
+        \item Large scale OSS systems have to be produced by teams
+        \item Developed by people working across the world, communicating electronically
+        \item It has some of the aspects of Agile software development, but the Agile methodology emphasises close personal interaction
+        \item With OSS systems there is typically no developer-customer distinction, the developers are also customers as they will make use of the system themselves
+    \end{itemize}
+    \item Linus's Law: Given enough eyeballs, all bugs are shallow (The more widely available the source code is for public testing, scrutiny, and experimentation, the more rapidly all forms of bugs will be discovered)
+    \item Open Source and Bussiness risks:
+    \begin{itemize}
+        \item Develop own software: High risk, High cost, High time
+        \item Buy software from closed source vendor: High cost, Bind to vendor
+        \item Use an OSS product: Have source code, Several service companies who will help adapt it to your needs, no risk that a company supplying the software to you goes out of business, or makes unreasonable charges (You have no choice but to carry on using it)
+    \end{itemize}
+    \item Software freedom: 
+    \begin{itemize}
+        \item Freedom to run the program
+        \item Freedom to study how the program works, and change it to meet the needs (Need access to the source code)
+        \item Freedom to redistribute copies
+        \item The freedom to distribute copies of your modified versions to others (Need access to the source code)
+    \end{itemize}
+    \item Copyright: 
+    \begin{itemize}
+        \item Only the producers of the original work have the full right to produce copies, and create new work based on it
+        \item They may grant permission for others to make copies of the work and adapt it
+        \item Permission to make copies and adapt work will generally be made with the imposition of obligations on those doing it towards the original author, usually include making a payment to the original author, but could also include restrictions on the form of the copy and and any adaption
+        \item[$\diamond$] The idea is that people and organisations will be more willing to produce new work, if they are guaranteed to keep profits made from it
+    \end{itemize}
+    \item Copyleft: Guarantees the freedom of others to copy and use their work rather than stopping unauthorised or unpaid copying
+    \begin{itemize}
+        \item Involves a free software license, which is associated with free software, use of that software is granted only to those who agree to the terms of the free software license
+        \item The license will include the requirement that the source code is made available, and also state the extent to which the code may be modified and how the modifications should be acknowledged
+        \item Any work derived from the Copyleft license must also comply with the provisions of the Copyleft license
+        \item Example license: GPL, LGPL, Mozilla Public License 2.0, \dots
+    \end{itemize}
+    \item[/] AOSP (Android Open Source Project):
+    \begin{itemize}
+        \item People and roles:
+        \begin{itemize}
+            \item Contributor: Anyone making contributions to AOSP source code (Google employees and external developers)
+            \item Developer: An engineer writing applications that run on Android devices
+            \item Verifier: Responsible for testing change requests
+            \item Approver: Decides whether to include or exclude a proposed change
+            \item Project leader: Oversees the engineering for individual Android projects and is ``typically employed by Google''
+        \end{itemize}
+        \item Open Source (Android): Not very open-source
+        \begin{itemize}
+            \item Android is closely controlled by Google, which gives priority access to specific developer groups and organisations, and does not make public its internal decision-making processes
+            \item Google does not provide public information regarding meetings held and decisions made on the development of Android
+            \item Google owns the Android trademark, and will not permit it to be used for devices which use Android code but do not pass a set of tests, the Compatibility Test Suite (CTS) which it controls
+        \end{itemize}
+    \end{itemize}
+    \item Linux: An ``open source'' computer operating system
+    \item Other examples: (Software)7-zip, Eclipse, Mozilla Firefox, Chromium, (Operating System)FreeBSD, ReactOS, FreeDOS, (Program Language)Python, PHP, PHDL, Perl
+    \item Core and Community
+    \begin{itemize}
+        \item Core people control the code base
+        \item A larger group of people have some involvement in correcting defects \& reporting problems
+        \item Volunteers may submit code to implement proposed new features, the project may benefit from picking the best from several implementations
+        \item This system works best when the overall product naturally divides into many semi-independent parts
+        \item A fork is when there is a split, and a separate group starts maintaining a separate version of the product. Developers will prefer to contribute to an established product rather than fork it and develop their own new version
+    \end{itemize}
+    \item Open Source Governance: Some organizations or companies are responsible for major major version updates of open source software
+    \item Advantages:
+    \begin{itemize}
+        \item Availability of source code:
+        \begin{itemize}
+            \item Source code to understand and learn from
+            \item Do not have to re-invent the wheel
+            \item Free as in ''freedom''
+        \end{itemize}
+        \item Does not depend on vendor
+        \item Quality and Customizability in open source is better
+        \item Costs much less than proprietary counterparts
+    \end{itemize}
+    \item Disadvantages:
+    \begin{itemize}
+        \item Not generally straightforward to use and requires a certain learning curve to use and get accustomed
+        \item Incompatibility issue with software and hardware
+        \item Bad Codes, and some unqualified people who uses it
+        \item Software quality assurance process is widely not transparent
+        \item No financial incentive
+        \item May have security issues (Malicious code)
+    \end{itemize}
+\end{itemize}
+
+\section{Software Development Tools}
+\begin{itemize}
+    \item Microsoft's Best Practices:
+    \begin{itemize}
+        \item Revision Control System (Version Control)
+        \begin{itemize}
+            \item Incorporate roll-back features
+            \item Check-out
+            \item Check-in
+            \item Conflict
+            \item Merge
+        \end{itemize}
+        \item Daily Build: Having a practice of doing this once a day, usually overnight so the team starts work with the latest version of the software
+        \begin{itemize}
+            \item Build: The process of producing a complete working version of the software for the whole system, compiling the source code files and linking them
+            \item Validation Test --- ``Smoke Test''
+            \item Build break: When the build or its tests fail, it should be considered a high priority problem that must be fixed immediately
+            \item Continuous Integration (CI):
+            \begin{itemize}
+                \item Require a complete system build to be executed after check-in
+                \item Developers are only allowed to submit code after it has passed all tests
+                \item Purpose: By frequent integration and automated testing, defects can be detected early, improving code quality and team collaboration efficiency
+            \end{itemize}
+        \end{itemize}      
+        \item Build Verification Tests
+        \begin{itemize}
+            \item Unit Testing:
+            \begin{itemize}
+                \item Assert statements: A statement involving an expression which is always meant to evaluate to true, if it does not an exception is thrown
+                \item Use \texttt{JUnit}
+            \end{itemize}
+        \end{itemize}
+        \item Bug Database: A central record for bugs that have been identified in the system
+        \begin{itemize}
+            \item Role: Problem recording, Allocation and tracking, Collaboration and communication, Data analysis
+            \item Include: Title, Description, Replication steps, Severity, Priority, Status (active, resolved, closed), etc
+            \item War Team and Bug Bridge
+            \begin{itemize}
+                \item Task: Ensure the system is good enough for release
+                \item Do: Triage remaining bugs
+            \end{itemize}
+        \end{itemize}
+        \item Code Reviews: A systematic examination of source code, involves  analysing code to check for compliance with predefined sets of coding guideline rules or best practices
+        \item Coding and Engineering Guidelines
+        \item Code Analysis Tools
+        \item Globalization and Localization: Need to adapt to different language text display and corresponding reading order
+    \end{itemize}
+    \item Debugger:
+    \begin{itemize}
+        \item Enable the programmer to investigate the dynamic state of the program execution when it is suspended, looking at the value of variables and possibly changing them
+        \item May run code step-by-step or may enable the programmer to set breakpoints at which it suspends
+        \item Simple way: \texttt{print} the value to check
+        \item 9 essential rules:
+        \begin{itemize}
+            \item Understand the system
+            \item Make it fail
+            \item Quit thinking and look
+            \item Divide and conquer
+            \item Change just one thing at a time
+            \item Keep an audit 
+            \item Check the obvious first
+            \item Ask someone else
+            \item If you didn’t fix it then it’s not fixed
+        \end{itemize}
+    \end{itemize}
+    \item IDE (Interactive Development Environments) vs Command line
+    \begin{itemize}
+        \item Command line gives closer control over the computer
+        \item IDE is more convenient and automates many of the routine tasks needed for managing your files while developing software
+        \item Automation in command line interfaces can be done by writing scripts
+        \item Use of an IDE can mean you are not aware of the various tools it uses underneath, and have less flexibility over use of tools 
+        \item It is a good idea to gain some experience in command line operation in order to better understand how your computer works
+    \end{itemize}
+\end{itemize}
+
+\section{Ethical --- Fair System}
+\begin{itemize}
+    \item Making the algorithm `unaware' by obscuring features (Simple solution, Hide some features)
+    \begin{itemize}
+        \item Data inherently biased
+        \item Indirect discrimination still happens through correlations
+        \item Algorithms are very good at picking up correlations
+    \end{itemize}
+    \item Obscuring correlated features (Hide all features)
+    \begin{itemize}
+        \item Decisions become inaccurate
+    \end{itemize}
+    \item Add more features
+    \item Pre-processing and Post-processing
+    \item Fair Behaviour with Reward (Machine Learning)
+    \begin{itemize}
+        \item Need to treat different features differently
+        \item Not legal in some countries
+        \item Not clear what the fairness criteria should be
+    \end{itemize}
+    \item Auditing Fairness: The UK Data Protection Act (or European GDPR), `Right to be forgotten'
+    \begin{itemize}
+        \item Auditing the outcomes
+        \item Auditing the process
+        \item Auditing the algorithms
+    \end{itemize}
+    \item Conclusion:
+    \begin{itemize}
+        \item Data used in software or to train algorithms is often biased
+        \item Not mean that fairness in algorithms cannot be achieved
+        \item Making algorithms unaware does not work, and could make the outcome worse
+        \item Some solutions require discriminatory processes to compensate for bias
+        \item As a society we need to decide on fairness criteria, and how we would like to measure these - but more research is needed in understanding the trade-offs and metrics
+        \item Algorithm decisions are often questioned/audited, and it’s clear how this can be done
+    \end{itemize}
+    \item Code of Ethics: committed to the health, safety and welfare of the public, and adhere to eight principles
+    \begin{enumerate}
+        \item Public: Act consistently in the public interest
+        \item Client and employer: Act in a manner that is in the best interests of their client and employer, consistent with the public interest
+        \item Product: Ensure that their products and related modifications meet the highest professional standards possible
+        \item Judgment: Maintain integrity and independence in their professional judgment
+        \item Management: Managers and leaders shall subscribe to and promote an ethical approach to the management of software development and maintenance
+        \item Profession: Advance the integrity and reputation of the profession consistent with the public interest
+        \item Colleagues: Be fair to and supportive of their colleagues
+        \item Self: Participate in lifelong learning regarding the practice of their profession and shall promote an ethical approach to the practice of the profession.of engineering and technology achievements
+    \end{enumerate}
+\end{itemize}
+
+\section{Risk Management}
+\begin{itemize}
+    \item Protect the reputation of the company and/or prevent major potential losses or threats from operating `business-as-usual'
+    \item Account for the uncertainties in project delivery
+    \item By identifying potential problems in advance means potential risk-handling measures can be planned (and taken as needed) to mitigate against any adverse impacts during the lifecycle of the project (or product)
+    \item Process:
+    \begin{itemize}
+        \item Risk Identification
+        \item Risk Analysis
+        \item Risk Planning
+        \item Risk Monitoring
+    \end{itemize}
+    \item Types:
+    \begin{itemize}
+        \item Project risks
+        \item Technical (or product) risks
+        \item Business risks
+    \end{itemize}
+    \item Software Risk Metrics
+    \begin{itemize}
+        \item Improve the management of software development and product risk
+        \item Provide indicators for the impact and/or likelihood of future risk, based on past experiences
+        \item Examples:
+        \begin{itemize}
+            \item Technology risk exposure --- the potential loss or damage to the business from the delivery or use of software
+            \item Technology risk maturity --- the level of software development or integration practices
+            \item Number of risk incidents --- the frequency, severity, and causes of software-related risk events
+            \item Technology risk response --- the actions and resources required to deal with risk-related events
+        \end{itemize}
+    \end{itemize}
+    \item Risk Mitigation/Avoidance Strategies
+    \begin{itemize}
+        \item Understand the business environment: Be aware of the nature of the business, the market it operates in
+        \item Balancing innovation and stability: Becareful aboutusing new/unfamiliar products, keep awareness of new products, and do not stick to old tools and systems out of habit or unwillingness to change
+        \item Regularly synchronize progress: Ensure senior management are well informed on the progress of the project and its importance to the organisation’s goals
+        \item Timely exposure of problems: Actively monitor performance, be prompt to report any slippage, and address/do not “hide” problems from senior management or staff
+        \item Skill decentralization: Ensurestaff are well trained, and avoid having just one person who has the skills or knowledge of a vital topic
+        \item Reduce the risk of personnel turnover: Encourage team building, and ensure the working environment is pleasant, so staff are less likely to leave the company
+    \end{itemize}
+    \item Use of Contingencies:
+    \begin{itemize}
+        \item Alternative resources being identified
+        \item Possibility of outsourcing work or alternative supply
+        \item Prioritising which parts of the project to continue, which to postpone or change
+        \item Identifying aspects of the project which could be modified
+        \item mean allowing extra time to complete a task, or to correct a problem
+        \item Damage limitation and Minimisation strategies
+    \end{itemize}
+    \item Agile in Risk Management
+    \begin{itemize}
+        \item Agile emphasises continuous testing throughout development, which should enable errors to be detected early (help)
+        \item Agile emphasises frequent interaction with the customer, so the customer can point out if the system is being developed in a way that seems to be unsatisfactory (help)
+        \item Agile does not emphasise long-term planning, which may mean it is harder to identify some risks (risk)
+        \item Without long-term planning, it is possible that features may be introduced that could cause problems later on (risk)
+        \item Agile also typically requires less interim deliverables, which may mean it is harder to identify problems step-by-step (risk)
+    \end{itemize}
+\end{itemize}
+
+\section{Quality Management}
+\begin{itemize}
+    \item Ensure that software products reach an appropriate level of quality, meeting requirements for functionality, performance, and reliability
+    \item Agile Quality Management:
+    \begin{itemize}
+        \item VS Waterfall: 
+        \begin{table}[H]
+            \centering
+            \begin{tabular}{cc}
+                \toprule
+                \textbf{Waterfall} & \textbf{Agile} \\
+                \midrule
+                \makecell{Quality assurance is an independent post process \\ that undergoes testing and validation \\ only after the completion of system development} & \makecell{Quality assurance is synchronized \\ with development \\ and runs through each iteration cycle} \\
+                \midrule
+                \makecell{Easy to cause delayed problem discovery \\ and high repair costs} & \makecell{Developing software by \\ continuous release of new versions \\`' with extra features}\\
+                \bottomrule
+            \end{tabular}
+        \end{table}
+        \item All staff quality responsibility: Members need to specifically evaluate system quality from a customer perspective or Customer direct participation
+        \item Advantage:
+        \begin{itemize}
+            \item Problems are discovered immediately during the development process, reducing large-scale rework in the later stages
+        \end{itemize}
+    \end{itemize}
+    \item `High Quality' Software:
+    \begin{itemize}
+        \item Meet its requirements
+        \item Be efficient and easy to use
+        \item Be easy to modify to meey changing requirements
+        \item Pay attention to the main design principles while emphasizing the quality of internal code
+        \item Focus on `fitness for purpose' rather than specification conformance
+    \end{itemize}
+    \item Fitness for Purpose (Good enough software):
+    \begin{itemize}
+        \item Have programming and documentationstandards been followed in the development process?
+        \item Has the software been properly tested?
+        \item Is the software sufficiently dependable to be put into use?
+        \item Is the performance of the software acceptable for normal use?
+        \item Is the software usable?
+        \item Is the software well-structured and understandable?
+        \item ``Good enough'' does not mean lack of attention to good standards during software development: sloppy standards early-on will lead to delay and more cost later, as well as poor quality products
+    \end{itemize}
+    \item ``Bug'' or ``Feature''
+    \begin{itemize}
+        \item Bug: An aspect of the system’s behaviour which is acknowledged as incorrect
+        \item Feature: An aspect of the system’s behaviour which is acknowledged as correct
+        \item Usersmaybecomeaware ofaninconsistent or unintended behaviour and find it useful in some circumstances, in this way a ``bug'' becomes a ``feature''
+    \end{itemize}
+    \item Attributes: Necessary to trade one off against another
+    \begin{table}[H]
+        \centering
+        \begin{tabular}{lll}
+            Safety & Understandability & Portability\\
+            Security & Testability & Usability\\
+            Reliability & Adaptability & Reusability\\
+            Resilience & Modularity & Efficiency\\
+            Robustness & Complexity & Learnability\\
+        \end{tabular}
+    \end{table}
+    \item Visible and Invisible Quality:
+    \begin{itemize}
+        \item From the point ofview of the customer, the most important quality aspects are what is immediately visible
+        \item Customer experience of using the system will also demonstrate other important quality aspects such as ease of use of the system, efficiency, quality of its support documentation
+        \item Quality aspects such as security and reliability are not immediately visible, but are of direct relevance to the customer
+        \item Code quality is not of direct relevance to the customer, but is important: Good quality code can be \textbf{easier} to modify to add new features, or to make required changes; Poor quality code is more likely to \textbf{contain bugs}, leading to poor reliability and possible security problems
+    \end{itemize}
+\end{itemize}
+
+% PAGE 43
+\section{Performance}
+\begin{itemize}
+    \item Poor performance $\rightarrow$ `Bug'
+    \item Solve:
+    \begin{itemize}
+        \item Employ skilled programmers
+        \item Use library software for routine algorithms
+        \item Avoid using complex interactions
+    \end{itemize}
+    \item Little point in improving the efficiency of Code
+\end{itemize}
+
+\section{Reliability}
+\begin{itemize}
+    \item The probability of a software system operating without failure for a specified period of time in a specified environment
+    \item Changes in the environment may lead to failure
+    \item Not taken to ensure it would deal correctly with all situations encountered when used in practice
+    \item Due to: Not taking account of a situation, or the implementation not meeting the specification
+    \item Consider:
+    \begin{itemize}
+        \item Possibility of the failure happening
+        \item Damage caused if the failure happen 
+    \end{itemize}
+\end{itemize}
+
+\section{Security and Resilience}
+\begin{itemize}
+    \item Core goal:
+    \begin{itemize}
+        \item Ensure that software and data are not inadvertently misused or maliciously attacked by users
+        \item Even in the face of malicious users, software should maintain correct and predictable execution to prevent unauthorized access or data leakage
+    \end{itemize}
+    \item Core Requirement:
+    \begin{itemize}
+        \item Reduce vulnerabilities: Software should try to avoid exploitable weaknesses, abnormal behavior, or crashes
+        \item Anti attack capability: able to continue running and quickly recover even under incorrect use or attack
+    \end{itemize}
+\end{itemize}
+
+\section{Standards}
+\begin{itemize}
+    \item Definition: A set of written rules to ensure that all participants adhere to uniform norms
+    \item Scope:
+    \begin{itemize}
+        \item International (such as ISO 9001), national, organizational, or individual projects.
+        \item Covering all aspects of software development (management, code style, documentation, etc.)
+    \end{itemize}
+    \item Role:
+    \begin{itemize}
+        \item Promote collaboration: Unified norms make team communication and cooperation more efficient
+        \item Save time: Adopt mature standards to avoid redefining rules for each project
+        \item Based on experience: Integrating past successful practices to avoid historical errors
+        \item Assist newcomers: Provide a clear guidance framework for new employees to quickly adapt to organizational norms
+    \end{itemize}
+    \item Problem:
+    \begin{itemize}
+        \item Outdated: Standards may become invalid due to technological updates or changes in experience
+        \item Side effects: Some protective measures in certain standards may solve one problem but trigger other problems
+        \item Bureaucratic risk: 
+        \begin{itemize}
+            \item Standards may be seen as tedious paperwork, wasting time rather than improving efficiency
+            \item If inefficient rules are mixed in the standard, its high-quality content may also be overlooked
+        \end{itemize}
+        \item Improve:
+        \begin{itemize}
+            \item Regular review: It is necessary to combine the practical experience of current practitioners and clearly explain the logic of standard setting
+            \item Tool support: Reduce additional administrative burden through tools, but \textbf{poorly designed tools actually increase expenses}
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\section{Outsourcing}
+\begin{itemize}
+    \item Cause:
+    \begin{itemize}
+        \item New workers need to be trained
+        \item Take time to understand enough aspects of an existing project
+        \item More possible communications are needed
+    \end{itemize}
+    \item Problem:
+    \begin{itemize}
+        \item Conflict of development modes: Continuous interaction and iterative development with customers are required, while remote outsourcing is difficult to achieve efficient collaboration
+        \item Language and cultural barriers:
+        \begin{itemize}
+            \item Proficient in the client's language is required to accurately understand requirements, write documentation, and code
+            \item Cultural differences may lead to misunderstandings, and the efficiency of long-distance communication is lower than face-to-face communication
+        \end{itemize}
+        \item Team collaboration issues: Outsourcing teams are prone to developing a confrontational mentality of `us vs. them'
+        \item Management and Cost Issues:
+        \begin{itemize}
+            \item Additional administrative expenses
+            \item High modification costs and project delays
+        \end{itemize}
+    \end{itemize}
+    \item Agile Development is better
+\end{itemize}
+\end{document}
